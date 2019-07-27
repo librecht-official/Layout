@@ -2,21 +2,20 @@ PODS:
   - Layout (0.0.1)
 
 DEPENDENCIES:
-  - Layout (from `https://github.com/librecht-official/Layout.git`, tag `0.0.1`)
+  - Layout (from `https://github.com/librecht-official/Layout.git`)
 
 EXTERNAL SOURCES:
   Layout:
     :git: https://github.com/librecht-official/Layout.git
-    :tag: 0.0.1
 
 CHECKOUT OPTIONS:
   Layout:
+    :commit: 2d4a095661b6458299f4708bb979b756fea5d8d4
     :git: https://github.com/librecht-official/Layout.git
-    :tag: 0.0.1
 
 SPEC CHECKSUMS:
-  Layout: 4cf4abd6d7ec2fbdc3348990aad80a64d476f40a
+  Layout: d3c7f2c939eba6cfc0957493fa3335f286afc220
 
-PODFILE CHECKSUM: 8d0b1d64382ef16e3f2a222ce90ee67a7ff5be9d
+PODFILE CHECKSUM: a4168d51a315245fc9c86633ccabadea6cc01b86
 
 COCOAPODS: 1.7.3

@@ -3,6 +3,11 @@ platform :ios, '10.0'
 target 'LayoutExample' do
   use_frameworks!
 
-  pod 'Layout', :git => 'https://github.com/librecht-official/Layout.git', :tag => '0.0.2'
+  pod 'Layout', :git => 'https://github.com/librecht-official/Layout.git'
+
+  target 'LayoutTests' do
+    inherit! :search_paths
+    pod 'Layout', :git => 'https://github.com/librecht-official/Layout.git'
+  end
 
 end

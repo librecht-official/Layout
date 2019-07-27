@@ -3,19 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC2A1F37104293126BE23923 /* Pods_LayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B07D33A0BEEE26BDF17913 /* Pods_LayoutTests.framework */; };
 		DA05AF19B31E21F383D2F7AA /* Pods_LayoutExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575BFD576BB386BD34EF57AE /* Pods_LayoutExample.framework */; };
 		F509229D22ECA81600527DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509229C22ECA81600527DAB /* AppDelegate.swift */; };
 		F509229F22ECA81600527DAB /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509229E22ECA81600527DAB /* TestViewController.swift */; };
 		F50922A422ECA81700527DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50922A322ECA81700527DAB /* Assets.xcassets */; };
 		F50922A722ECA81700527DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50922A522ECA81700527DAB /* LaunchScreen.storyboard */; };
+		F50922CA22ECAD0900527DAB /* DeclarativeLayoutAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922C822ECAD0900527DAB /* DeclarativeLayoutAPITests.swift */; };
+		F50922CB22ECAD0900527DAB /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922C922ECAD0900527DAB /* CoreTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F50922C322ECACDD00527DAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F509229122ECA81600527DAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F509229822ECA81600527DAB;
+			remoteInfo = LayoutExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		575BFD576BB386BD34EF57AE /* Pods_LayoutExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE45939451AFCD7E0D0D056 /* Pods-LayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutTests.debug.xcconfig"; path = "Target Support Files/Pods-LayoutTests/Pods-LayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		67B07D33A0BEEE26BDF17913 /* Pods_LayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C4E760DFF2922AF71E8EE05 /* Pods-LayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutTests.release.xcconfig"; path = "Target Support Files/Pods-LayoutTests/Pods-LayoutTests.release.xcconfig"; sourceTree = "<group>"; };
 		D04C30F046FA1973F59839CE /* Pods-LayoutExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutExample.release.xcconfig"; path = "Target Support Files/Pods-LayoutExample/Pods-LayoutExample.release.xcconfig"; sourceTree = "<group>"; };
 		F509229922ECA81600527DAB /* LayoutExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayoutExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F509229C22ECA81600527DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -23,6 +39,10 @@
 		F50922A322ECA81700527DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F50922A622ECA81700527DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F50922A822ECA81700527DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50922BE22ECACDD00527DAB /* LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50922C222ECACDD00527DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50922C822ECAD0900527DAB /* DeclarativeLayoutAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeLayoutAPITests.swift; sourceTree = "<group>"; };
+		F50922C922ECAD0900527DAB /* CoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		F645B8FB915093D39F7E0A32 /* Pods-LayoutExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutExample.debug.xcconfig"; path = "Target Support Files/Pods-LayoutExample/Pods-LayoutExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +55,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F50922BB22ECACDD00527DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC2A1F37104293126BE23923 /* Pods_LayoutTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -43,8 +71,9 @@
 			children = (
 				F645B8FB915093D39F7E0A32 /* Pods-LayoutExample.debug.xcconfig */,
 				D04C30F046FA1973F59839CE /* Pods-LayoutExample.release.xcconfig */,
+				5AE45939451AFCD7E0D0D056 /* Pods-LayoutTests.debug.xcconfig */,
+				8C4E760DFF2922AF71E8EE05 /* Pods-LayoutTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -52,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				575BFD576BB386BD34EF57AE /* Pods_LayoutExample.framework */,
+				67B07D33A0BEEE26BDF17913 /* Pods_LayoutTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -60,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				F509229B22ECA81600527DAB /* LayoutExample */,
+				F50922BF22ECACDD00527DAB /* LayoutTests */,
 				F509229A22ECA81600527DAB /* Products */,
 				036E0362762F8518F73CB9BA /* Pods */,
 				BAEFEE1A6973DA567D23B6A6 /* Frameworks */,
@@ -70,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F509229922ECA81600527DAB /* LayoutExample.app */,
+				F50922BE22ECACDD00527DAB /* LayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +116,16 @@
 				F50922A822ECA81700527DAB /* Info.plist */,
 			);
 			path = LayoutExample;
+			sourceTree = "<group>";
+		};
+		F50922BF22ECACDD00527DAB /* LayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				F50922C922ECAD0900527DAB /* CoreTests.swift */,
+				F50922C822ECAD0900527DAB /* DeclarativeLayoutAPITests.swift */,
+				F50922C222ECACDD00527DAB /* Info.plist */,
+			);
+			path = LayoutTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +150,26 @@
 			productReference = F509229922ECA81600527DAB /* LayoutExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F50922BD22ECACDD00527DAB /* LayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50922C722ECACDD00527DAB /* Build configuration list for PBXNativeTarget "LayoutTests" */;
+			buildPhases = (
+				552FE250A03A9F8503B89EF9 /* [CP] Check Pods Manifest.lock */,
+				F50922BA22ECACDD00527DAB /* Sources */,
+				F50922BB22ECACDD00527DAB /* Frameworks */,
+				F50922BC22ECACDD00527DAB /* Resources */,
+				F25E482A8FDB0DEF14AFF91C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F50922C422ECACDD00527DAB /* PBXTargetDependency */,
+			);
+			name = LayoutTests;
+			productName = LayoutTests;
+			productReference = F50922BE22ECACDD00527DAB /* LayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -120,6 +182,11 @@
 				TargetAttributes = {
 					F509229822ECA81600527DAB = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					F50922BD22ECACDD00527DAB = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = F509229822ECA81600527DAB;
 					};
 				};
 			};
@@ -137,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				F509229822ECA81600527DAB /* LayoutExample */,
+				F50922BD22ECACDD00527DAB /* LayoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,9 +219,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F50922BC22ECACDD00527DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		552FE250A03A9F8503B89EF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LayoutTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		71155BEC2F59EBE575FBEF0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +290,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F25E482A8FDB0DEF14AFF91C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LayoutTests/Pods-LayoutTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LayoutTests/Pods-LayoutTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LayoutTests/Pods-LayoutTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -205,7 +319,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F50922BA22ECACDD00527DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50922CB22ECAD0900527DAB /* CoreTests.swift in Sources */,
+				F50922CA22ECAD0900527DAB /* DeclarativeLayoutAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F50922C422ECACDD00527DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F509229822ECA81600527DAB /* LayoutExample */;
+			targetProxy = F50922C322ECACDD00527DAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F50922A522ECA81700527DAB /* LaunchScreen.storyboard */ = {
@@ -371,6 +502,49 @@
 			};
 			name = Release;
 		};
+		F50922C522ECACDD00527DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE45939451AFCD7E0D0D056 /* Pods-LayoutTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LayoutExample.app/LayoutExample";
+			};
+			name = Debug;
+		};
+		F50922C622ECACDD00527DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C4E760DFF2922AF71E8EE05 /* Pods-LayoutTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LayoutExample.app/LayoutExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -388,6 +562,15 @@
 			buildConfigurations = (
 				F50922AC22ECA81700527DAB /* Debug */,
 				F50922AD22ECA81700527DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F50922C722ECACDD00527DAB /* Build configuration list for PBXNativeTarget "LayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50922C522ECACDD00527DAB /* Debug */,
+				F50922C622ECACDD00527DAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
