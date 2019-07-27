@@ -69,6 +69,9 @@ public struct Container: LayoutComponent {
 ///
 /// Usefull to describe empty (placeholder) spaces inside stack layout.
 public struct EmptyComponent: LayoutComponent {
+    public init() {
+    }
+    
     public func performLayout(inFrame frame: CGRect) {
     }
 }

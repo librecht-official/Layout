@@ -1,0 +1,8 @@
+platform :ios, '10.0'
+
+target 'LayoutExample' do
+  use_frameworks!
+
+  pod 'Layout', :git => 'https://github.com/librecht-official/Layout.git', :tag => '0.0.2'
+
+end

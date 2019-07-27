@@ -65,7 +65,7 @@ public enum VerticalLayoutRule {
     /// Y-center and bottom inset
     case v6(centerY: Center, bottom: CGFloat)
     
-    static let zero = VerticalLayoutRule.v1(top: 0, bottom: 0)
+    public static let zero = VerticalLayoutRule.v1(top: 0, bottom: 0)
 }
 
 /// Fixed-size layout rule describing how to calculate horizontal bounds of the view (x and width)
@@ -77,7 +77,7 @@ public enum HorizontalLayoutRule {
     case h5(centerX: Center, leading: CGFloat)
     case h6(centerX: Center, trailing: CGFloat)
     
-    static let zero = HorizontalLayoutRule.h1(leading: 0, trailing: 0)
+    public static let zero = HorizontalLayoutRule.h1(leading: 0, trailing: 0)
 }
 
 /// Fixed-size layout rule describing how to calculate bounds of the view with known aspect ratio

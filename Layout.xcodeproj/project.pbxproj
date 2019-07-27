@@ -7,44 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F509224D22EC8ADD00527DAB /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509224322EC8ADD00527DAB /* Layout.framework */; };
-		F509225222EC8ADD00527DAB /* LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509225122EC8ADD00527DAB /* LayoutTests.swift */; };
 		F509225422EC8ADD00527DAB /* Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = F509224622EC8ADD00527DAB /* Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F509228822EC8D1E00527DAB /* StackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228022EC8D1E00527DAB /* StackLayout.swift */; };
 		F509228922EC8D1E00527DAB /* WidthAwareStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228122EC8D1E00527DAB /* WidthAwareStackLayout.swift */; };
 		F509228A22EC8D1E00527DAB /* HeightAwareStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */; };
 		F509228B22EC8D1E00527DAB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228322EC8D1E00527DAB /* Layout.swift */; };
-		F509228C22EC8D1E00527DAB /* WidthAwareDeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228422EC8D1E00527DAB /* WidthAwareDeclarativeLayout.swift */; };
-		F509228D22EC8D1E00527DAB /* HeightAwareDeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228522EC8D1E00527DAB /* HeightAwareDeclarativeLayout.swift */; };
-		F509228E22EC8D1E00527DAB /* UIKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228622EC8D1E00527DAB /* UIKit+Layout.swift */; };
-		F509228F22EC8D1E00527DAB /* DeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228722EC8D1E00527DAB /* DeclarativeLayout.swift */; };
+		F50922B222ECA91700527DAB /* UIKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922AE22ECA91700527DAB /* UIKit+Layout.swift */; };
+		F50922B322ECA91700527DAB /* HeightAwareDeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922AF22ECA91700527DAB /* HeightAwareDeclarativeLayout.swift */; };
+		F50922B422ECA91700527DAB /* WidthAwareDeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922B022ECA91700527DAB /* WidthAwareDeclarativeLayout.swift */; };
+		F50922B522ECA91700527DAB /* DeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922B122ECA91700527DAB /* DeclarativeLayout.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F509224E22EC8ADD00527DAB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F509223A22EC8ADD00527DAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F509224222EC8ADD00527DAB;
-			remoteInfo = Layout;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F509224322EC8ADD00527DAB /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F509224622EC8ADD00527DAB /* Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
 		F509224722EC8ADD00527DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F509224C22EC8ADD00527DAB /* LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F509225122EC8ADD00527DAB /* LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTests.swift; sourceTree = "<group>"; };
-		F509225322EC8ADD00527DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F509228022EC8D1E00527DAB /* StackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackLayout.swift; sourceTree = "<group>"; };
 		F509228122EC8D1E00527DAB /* WidthAwareStackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthAwareStackLayout.swift; sourceTree = "<group>"; };
 		F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightAwareStackLayout.swift; sourceTree = "<group>"; };
 		F509228322EC8D1E00527DAB /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		F509228422EC8D1E00527DAB /* WidthAwareDeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidthAwareDeclarativeLayout.swift; path = ../../LayoutDSL/LayoutDSL/Layout/WidthAwareDeclarativeLayout.swift; sourceTree = "<group>"; };
-		F509228522EC8D1E00527DAB /* HeightAwareDeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeightAwareDeclarativeLayout.swift; path = ../../LayoutDSL/LayoutDSL/Layout/HeightAwareDeclarativeLayout.swift; sourceTree = "<group>"; };
-		F509228622EC8D1E00527DAB /* UIKit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIKit+Layout.swift"; path = "../../LayoutDSL/LayoutDSL/Layout/UIKit+Layout.swift"; sourceTree = "<group>"; };
-		F509228722EC8D1E00527DAB /* DeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeclarativeLayout.swift; path = ../../LayoutDSL/LayoutDSL/Layout/DeclarativeLayout.swift; sourceTree = "<group>"; };
+		F50922AE22ECA91700527DAB /* UIKit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Layout.swift"; sourceTree = "<group>"; };
+		F50922AF22ECA91700527DAB /* HeightAwareDeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightAwareDeclarativeLayout.swift; sourceTree = "<group>"; };
+		F50922B022ECA91700527DAB /* WidthAwareDeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthAwareDeclarativeLayout.swift; sourceTree = "<group>"; };
+		F50922B122ECA91700527DAB /* DeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,14 +40,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F509224922EC8ADD00527DAB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F509224D22EC8ADD00527DAB /* Layout.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				F509224522EC8ADD00527DAB /* Layout */,
-				F509225022EC8ADD00527DAB /* LayoutTests */,
 				F509224422EC8ADD00527DAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				F509224322EC8ADD00527DAB /* Layout.framework */,
-				F509224C22EC8ADD00527DAB /* LayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,23 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				F509227F22EC8D1E00527DAB /* Core */,
-				F509228722EC8D1E00527DAB /* DeclarativeLayout.swift */,
-				F509228522EC8D1E00527DAB /* HeightAwareDeclarativeLayout.swift */,
-				F509228422EC8D1E00527DAB /* WidthAwareDeclarativeLayout.swift */,
-				F509228622EC8D1E00527DAB /* UIKit+Layout.swift */,
+				F50922B122ECA91700527DAB /* DeclarativeLayout.swift */,
+				F50922AF22ECA91700527DAB /* HeightAwareDeclarativeLayout.swift */,
+				F50922B022ECA91700527DAB /* WidthAwareDeclarativeLayout.swift */,
+				F50922AE22ECA91700527DAB /* UIKit+Layout.swift */,
 				F509224622EC8ADD00527DAB /* Layout.h */,
 				F509224722EC8ADD00527DAB /* Info.plist */,
 			);
 			path = Layout;
-			sourceTree = "<group>";
-		};
-		F509225022EC8ADD00527DAB /* LayoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				F509225122EC8ADD00527DAB /* LayoutTests.swift */,
-				F509225322EC8ADD00527DAB /* Info.plist */,
-			);
-			path = LayoutTests;
 			sourceTree = "<group>";
 		};
 		F509227F22EC8D1E00527DAB /* Core */ = {
@@ -150,24 +116,6 @@
 			productReference = F509224322EC8ADD00527DAB /* Layout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F509224B22EC8ADD00527DAB /* LayoutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F509225A22EC8ADD00527DAB /* Build configuration list for PBXNativeTarget "LayoutTests" */;
-			buildPhases = (
-				F509224822EC8ADD00527DAB /* Sources */,
-				F509224922EC8ADD00527DAB /* Frameworks */,
-				F509224A22EC8ADD00527DAB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F509224F22EC8ADD00527DAB /* PBXTargetDependency */,
-			);
-			name = LayoutTests;
-			productName = LayoutTests;
-			productReference = F509224C22EC8ADD00527DAB /* LayoutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,9 +129,6 @@
 					F509224222EC8ADD00527DAB = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
-					};
-					F509224B22EC8ADD00527DAB = {
-						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -200,20 +145,12 @@
 			projectRoot = "";
 			targets = (
 				F509224222EC8ADD00527DAB /* Layout */,
-				F509224B22EC8ADD00527DAB /* LayoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F509224122EC8ADD00527DAB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F509224A22EC8ADD00527DAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,34 +164,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F509228C22EC8D1E00527DAB /* WidthAwareDeclarativeLayout.swift in Sources */,
 				F509228A22EC8D1E00527DAB /* HeightAwareStackLayout.swift in Sources */,
-				F509228E22EC8D1E00527DAB /* UIKit+Layout.swift in Sources */,
 				F509228B22EC8D1E00527DAB /* Layout.swift in Sources */,
-				F509228F22EC8D1E00527DAB /* DeclarativeLayout.swift in Sources */,
 				F509228922EC8D1E00527DAB /* WidthAwareStackLayout.swift in Sources */,
-				F509228D22EC8D1E00527DAB /* HeightAwareDeclarativeLayout.swift in Sources */,
 				F509228822EC8D1E00527DAB /* StackLayout.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F509224822EC8ADD00527DAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F509225222EC8ADD00527DAB /* LayoutTests.swift in Sources */,
+				F50922B522ECA91700527DAB /* DeclarativeLayout.swift in Sources */,
+				F50922B322ECA91700527DAB /* HeightAwareDeclarativeLayout.swift in Sources */,
+				F50922B222ECA91700527DAB /* UIKit+Layout.swift in Sources */,
+				F50922B422ECA91700527DAB /* WidthAwareDeclarativeLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F509224F22EC8ADD00527DAB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F509224222EC8ADD00527DAB /* Layout */;
-			targetProxy = F509224E22EC8ADD00527DAB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F509225522EC8ADD00527DAB /* Debug */ = {
@@ -430,42 +351,6 @@
 			};
 			name = Release;
 		};
-		F509225B22EC8ADD00527DAB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F509225C22EC8ADD00527DAB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -483,15 +368,6 @@
 			buildConfigurations = (
 				F509225822EC8ADD00527DAB /* Debug */,
 				F509225922EC8ADD00527DAB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F509225A22EC8ADD00527DAB /* Build configuration list for PBXNativeTarget "LayoutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F509225B22EC8ADD00527DAB /* Debug */,
-				F509225C22EC8ADD00527DAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -18,10 +18,12 @@ Pod::Spec.new do |spec|
   spec.author       = { "Vladislav Librecht" => "maclibrecht@gmail.com" }
 
   spec.platform     = :ios, "10.0"
+  spec.requires_arc = true
+  spec.swift_version = "4.2"
 
-  spec.source       = { :git => "https://github.com/librecht-official/Layout.git", :tag => "0.0.1" }
+  spec.source       = { :git => "https://github.com/librecht-official/Layout.git", :tag => "0.0.2" }
 
   spec.source_files  = "Layout/**/*.swift"
-  spec.swift_version = "4.2"
+  spec.exclude_files = "Example"
 
 end
