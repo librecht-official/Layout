@@ -21,6 +21,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/librecht-official/Layout.git", :tag => "0.0.1" }
 
-  spec.source_files  = "Layout"
+  spec.source_files  = "Layout/**/*.swift"
+  spec.swift_version = "4.2"
 
 end
