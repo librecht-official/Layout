@@ -66,8 +66,7 @@ public func stackColumn(
         }
     }
     totalAbsoluteItemsHeight += spacing * CGFloat(items.count - 1)
-    assert(bounds.height >= totalAbsoluteItemsHeight, "total absolute items height (+ top + bottom) \(totalAbsoluteItemsHeight) should be less than or equal to bounds.height \(bounds.height)")
-    let heightForWeightedItems = bounds.height - totalAbsoluteItemsHeight
+    let heightForWeightedItems = max(0, bounds.height - totalAbsoluteItemsHeight)
     
     var result = [CGRect]()
     var y = CGFloat(0)
