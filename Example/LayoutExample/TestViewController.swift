@@ -69,7 +69,7 @@ class TestView: UIView {
             .fixed(
                 height: 90,
                 Container(
-                    v1, h: .h1(leading: 8, trailing: 8), v: .v1(top: 10, bottom: 10),
+                    v1, .h1(leading: 8, trailing: 8), .v1(top: 10, bottom: 10),
                     inner: Component(
                         l1, .h1(leading: 12, trailing: 8), .v1(top: 8, bottom: 8)
                     )
@@ -129,19 +129,22 @@ class FixedColumTestView: UIView {
     lazy var v3 = UIView(color: UIColor.blue)
     
     lazy var column = Column(spacing: 8, [
-        ColumnItem(
+        ColumnItem.fixed(
+            height: .abs(64),
             Component(v1, .zero, .zero),
-            length: .abs(64), top: 8, bottom: 16, leading: 16, trailing: 8
+            Insets(top: 8, bottom: 16, leading: 16, trailing: 8)
         ),
-        ColumnItem(
-            Component(v2, .zero, .zero),
-            length: .weight(1)
+        ColumnItem.fixed(
+            height: .weight(1),
+            Component(v2, .zero, .zero)
         ),
-        ColumnItem(
+        ColumnItem.fixed(
+            height: .weight(2),
             Component(v3, .zero, .zero),
-            length: .weight(2), top: 8, bottom: 16, leading: 16, trailing: 8
+            Insets(top: 8, bottom: 16, leading: 16, trailing: 8)
         )
-        ])
+        ]
+    )
     
     override init(frame: CGRect) {
         super.init(frame: frame)

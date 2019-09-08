@@ -23,6 +23,10 @@ Pod::Spec.new do |spec|
   spec.swift_version = "4.2"
 
   spec.source_files  = "Layout/**/*.swift"
-  spec.exclude_files = "Example"
+  spec.exclude_files = "Example", "LayoutTests"
+
+  spec.test_spec "LayoutTests" do |test_spec|
+    test_spec.source_files = "LayoutTests/*.swift"
+  end
 
 end

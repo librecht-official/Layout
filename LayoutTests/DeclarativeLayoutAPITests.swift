@@ -26,6 +26,19 @@ final class HeightAwareViewMock: FrameHolder, HeightAware {
     }
 }
 
+final class WidthAwareViewMock: FrameHolder, WidthAware {
+    var frame: CGRect = .zero
+    let sizeIfHeight: (CGFloat) -> CGSize
+    
+    init(_ sizeIfHeight: @escaping (CGFloat) -> CGSize) {
+        self.sizeIfHeight = sizeIfHeight
+    }
+    
+    func size(ifHeight height: CGFloat) -> CGSize {
+        return sizeIfHeight(height)
+    }
+}
+
 class DeclarativeLayoutAPITests: XCTestCase {
     func testComponent() {
         let w = CGFloat(200)
@@ -45,11 +58,11 @@ class DeclarativeLayoutAPITests: XCTestCase {
         let container = ViewMock()
         let view = ViewMock()
         
-        let containerLayout: (Bool) -> Container = { relative in
+        let containerLayout: (Bool) -> Container<ViewMock> = { relative in
             Container(
                 container,
-                h: .h4(centerX: .abs(0), width: .abs(50)),
-                v: .v4(centerY: .abs(0), height: .abs(40)),
+                .h4(centerX: .abs(0), width: .abs(50)),
+                .v4(centerY: .abs(0), height: .abs(40)),
                 relative: relative,
                 inner: Component(
                     view, .h1(leading: 8, trailing: 8), .v1(top: 10, bottom: 10)
@@ -81,13 +94,13 @@ class DeclarativeLayoutAPITests: XCTestCase {
         
         let c = Container(
             container1,
-            h: .h1(leading: 8, trailing: 8), v: .v1(top: 8, bottom: 8), relative: false,
+            .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8), relative: false,
             inner: Container(
                 container2,
-                h: .h1(leading: 8, trailing: 8), v: .v1(top: 8, bottom: 8), relative: true,
+                .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8), relative: true,
                 inner: Container(
                     container3,
-                    h: .h1(leading: 8, trailing: 8), v: .v1(top: 8, bottom: 8), relative: false,
+                    .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8), relative: false,
                     inner: Component(
                         view, .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8)
                     )
@@ -109,20 +122,21 @@ class DeclarativeLayoutAPITests: XCTestCase {
         let v2 = ViewMock()
         let v3 = ViewMock()
         let c = Column(spacing: 8, [
-            ColumnItem(
+            ColumnItem.fixed(
+                height: .abs(64),
                 Component(v1, .h1(leading: 8, trailing: 12), .v1(top: 15, bottom: 10)),
-                length: .abs(64), bottom: 8
+                Insets(bottom: 8)
             ),
-            ColumnItem(
+            ColumnItem.fixed(
+                height: .weight(1),
                 Container(
                     v2,
-                    h: .h4(centerX: .abs(0), width: .abs(50)),
-                    v: .v4(centerY: .abs(0), height: .abs(40)),
+                    .h4(centerX: .abs(0), width: .abs(50)),
+                    .v4(centerY: .abs(0), height: .abs(40)),
                     inner: Component(
                         v3, .h1(leading: 15, trailing: 8), .v1(top: 10, bottom: 18)
                     )
-                ),
-                length: .weight(1)
+                )
             )
         ])
         c.performLayout(inFrame: bounds)
@@ -160,7 +174,7 @@ class DeclarativeLayoutAPITests: XCTestCase {
             .fixed(
                 height: 90,
                 Container(
-                    v1, h: .h1(leading: 8, trailing: 8), v: .v1(top: 10, bottom: 10),
+                    v1, .h1(leading: 8, trailing: 8), .v1(top: 10, bottom: 10),
                     inner: Component(
                         l1, .h1(leading: 12, trailing: 8), .v1(top: 8, bottom: 8)
                     )
@@ -189,4 +203,29 @@ class DeclarativeLayoutAPITests: XCTestCase {
         XCTAssertEqual(l2.frame, CGRect(x: 0, y: 10, width: 160, height: 160))
         XCTAssertEqual(l3.frame, CGRect(x: 8, y: 340, width: 184, height: 92))
     }
+    
+    func testRow_StartAlignment_LessThenItem() {
+        // Given
+        let bounds = CGRect(x: 0, y: 0, width: 200, height: 50)
+        let v1 = WidthAwareViewMock { CGSize(width: $0, height: $0) }
+        let v2 = WidthAwareViewMock { CGSize(width: $0, height: $0) }
+        let v3 = WidthAwareViewMock { CGSize(width: $0, height: $0) }
+        
+        let row = Row(spacing: 20, alignment: .start, [
+            RowItem.fixed(width: .abs(40), Component(v1)),
+            RowItem.lessThenOrEqual(30, Component(v2)),
+            RowItem.lessThenOrEqual(70, Component(v3)),
+            ]
+        )
+        
+        // When
+        row.performLayout(inFrame: bounds)
+        
+        // Then
+        XCTAssertEqual(v1.frame, CGRect(x: 0, y: 0, width: 40, height: 50))
+        XCTAssertEqual(v2.frame, CGRect(x: 60, y: 0, width: 30, height: 50))
+        XCTAssertEqual(v3.frame, CGRect(x: 110, y: 0, width: 50, height: 50))
+    }
+    
+    
 }

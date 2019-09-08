@@ -77,7 +77,7 @@ class CoreTests: XCTestCase {
         var v2: CGRect = .zero
         var v3: CGRect = .zero
         stackColumn(
-            spacing: 8, [
+            spacing: 8, alignment: .start, [
                 StackItem({ v1 = $0 }, length: .abs(64), top: 8, bottom: 0, leading: 8, trailing: 8),
                 StackItem({ v2 = $0 }, length: .weight(1), top: 0, bottom: 20, leading: 16, trailing: 16),
                 StackItem({ v3 = $0 }, length: .weight(2), top: 0, bottom: 0, leading: 20, trailing: 0),
@@ -97,7 +97,7 @@ class CoreTests: XCTestCase {
         var v2: CGRect = .zero
         var v3: CGRect = .zero
         stackRow(
-            spacing: 8, [
+            spacing: 8, alignment: .start, [
                 StackItem({ v1 = $0 }, length: .abs(64), top: 8, bottom: 8, leading: 8, trailing: 0),
                 StackItem({ v2 = $0 }, length: .weight(1), top: 16, bottom: 16, leading: 0, trailing: 20),
                 StackItem({ v3 = $0 }, length: .weight(2), top: 20, bottom: 0, leading: 0, trailing: 0),
