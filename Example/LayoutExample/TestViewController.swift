@@ -12,7 +12,7 @@ import Layout
 
 final class TestViewController: UIViewController {
     override func loadView() {
-        view = FixedColumTestView()
+        view = LessThanRuleView()
     }
 }
 
@@ -29,7 +29,7 @@ class TestView: UIView {
     let v2 = UIView()
     let l2: UILabel = {
         let l2 = UILabel()
-        l2.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        l2.text = longText
         l2.numberOfLines = 0
         //        l2.font = UIFont.systemFont(ofSize: 36)
         l2.backgroundColor = UIColor.green

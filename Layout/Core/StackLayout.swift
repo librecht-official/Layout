@@ -24,7 +24,7 @@ public enum StackItemLength {
 }
 
 public enum StackAlignment {
-    case start, end, evenlySpacing
+    case start, end, evenlySpaced
 }
 
 public struct StackItem {
@@ -93,8 +93,8 @@ public func stackColumn(
         return calculateItemsFramesForTopAlignment(input)
     case .end:
         return calculateItemsFramesForBottomAlignment(input)
-    case .evenlySpacing:
-        return calculateItemsFramesForEvenlySpacingColumnAlignment(input)
+    case .evenlySpaced:
+        return calculateItemsFramesForEvenlySpacedColumnAlignment(input)
     }
 }
 
@@ -149,7 +149,7 @@ func calculateItemsFramesForBottomAlignment(_ input: ItemsFramesCalculationInput
     return result
 }
 
-func calculateItemsFramesForEvenlySpacingColumnAlignment(
+func calculateItemsFramesForEvenlySpacedColumnAlignment(
     _ input: ItemsFramesCalculationInput) -> [CGRect] {
     
     let bounds = CGRect(origin: .zero, size: input.frame.size)
@@ -212,24 +212,24 @@ public func stackRow(
     )
     
     if haveWeightedItem {
-        return calculateItemsFramesForLeadingAlignment(input)
+        return calculateItemsFramesForLeadingAlignment(input, x0: 0)
     }
     switch alignment {
     case .start:
-        return calculateItemsFramesForLeadingAlignment(input)
+        return calculateItemsFramesForLeadingAlignment(input, x0: 0)
     case .end:
-        return calculateItemsFramesForTrailingAlignment(input)
-    case .evenlySpacing:
-        return calculateItemsFramesForEvenlySpacingRowAlignment(input)
+        return calculateItemsFramesForLeadingAlignment(input, x0: frame.width - totalAbsoluteItemsWidth)
+    case .evenlySpaced:
+        return calculateItemsFramesForEvenlySpacedRowAlignment(input)
     }
 }
 
-func calculateItemsFramesForLeadingAlignment(_ input: ItemsFramesCalculationInput) -> [CGRect] {
+func calculateItemsFramesForLeadingAlignment(_ input: ItemsFramesCalculationInput, x0: CGFloat) -> [CGRect] {
     let bounds = CGRect(origin: .zero, size: input.frame.size)
     let freeSpace = max(0, bounds.width - input.totalAbsoluteItemsLength)
     
     var result = [CGRect]()
-    var x = CGFloat(0)
+    var x = x0
     for item in input.items {
         let (y, h) = verticalLayout(
             rule: .v1(top: item.top, bottom: item.bottom), inBounds: bounds
@@ -245,34 +245,12 @@ func calculateItemsFramesForLeadingAlignment(_ input: ItemsFramesCalculationInpu
     return result
 }
 
-func calculateItemsFramesForTrailingAlignment(_ input: ItemsFramesCalculationInput) -> [CGRect] {
-    let bounds = CGRect(origin: .zero, size: input.frame.size)
-    let freeSpace = max(0, bounds.width - input.totalAbsoluteItemsLength)
-    
-    var result = [CGRect]()
-    var x = input.totalAbsoluteItemsLength
-    for item in input.items {
-        let w = item.length.value(totalWeight: input.totalWeight, totalWeightedLength: freeSpace)
-        x -= item.trailing - w
-        let (y, h) = verticalLayout(
-            rule: .v1(top: item.top, bottom: item.bottom), inBounds: bounds
-        )
-        let rect = CGRect(x: x + item.leading, y: y, width: w, height: h)
-            .offsetBy(dx: input.frame.origin.x, dy: input.frame.origin.y)
-        item.output(rect)
-        result.append(rect)
-        x -= item.leading + input.spacing
-    }
-    
-    return result
-}
-
-func calculateItemsFramesForEvenlySpacingRowAlignment(_ input: ItemsFramesCalculationInput) -> [CGRect] {
+func calculateItemsFramesForEvenlySpacedRowAlignment(_ input: ItemsFramesCalculationInput) -> [CGRect] {
     let bounds = CGRect(origin: .zero, size: input.frame.size)
     let freeSpace = max(0, bounds.width - input.totalAbsoluteItemsLength)
     
     guard input.items.count > 0 else { return [] }
-    let spacing = input.spacing + freeSpace / CGFloat(input.items.count)
+    let spacing = input.spacing + freeSpace / CGFloat(input.items.count - 1)
     
     var result = [CGRect]()
     var x = CGFloat(0)

@@ -129,7 +129,19 @@ public struct Insets {
         self.trailing = trailing
     }
     
-    static let zero = Insets()
+    public init(each a: CGFloat) {
+        self.init(top: a, bottom: a, leading: a, trailing: a)
+    }
+    
+    public static let zero = Insets()
+    
+    var topPlusBottom: CGFloat {
+        return top + bottom
+    }
+    
+    var leadingPlusTrailing: CGFloat {
+        return leading + trailing
+    }
 }
 
 // MARK: - FitHeightAwareLayoutComponent
@@ -137,28 +149,54 @@ public typealias FitHeightAwareLayoutComponent = LayoutComponent & HeightAware
 
 // MARK: - ColumnItem
 public enum ColumnItem {
+    // Fixed-size
     case fixed(height: StackItemLength, LayoutComponent, Insets)
     
     public static func fixed(height: StackItemLength, _ c: LayoutComponent) -> ColumnItem {
         return .fixed(height: height, c, .zero)
     }
     
-    case lessThenOrEqual(CGFloat, FitHeightAwareLayoutComponent, Insets)
+    // Less than
+    case lessThanOrEqual(CGFloat, FitHeightAwareLayoutComponent, Insets)
     
-    public static func lessThenOrEqual(_ max: CGFloat, c: FitHeightAwareLayoutComponent) -> ColumnItem {
-        return .lessThenOrEqual(max, c, .zero)
+    public static func lessThanOrEqual(_ max: CGFloat, c: FitHeightAwareLayoutComponent) -> ColumnItem {
+        return .lessThanOrEqual(max, c, .zero)
     }
     
-    //    case moreThenOrEqual(CGFloat, FitWidthAwareLayoutComponent)
-    //    case moreThenOrEqual(CGFloat, FitWidthAwareLayoutComponent, Insets)
-    //    case aspectRatio(CGFloat, FitWidthAwareLayoutComponent)
-    //    case aspectRatio(CGFloat, FitWidthAwareLayoutComponent, Insets)
+    // More than
+    case moreThanOrEqual(CGFloat, FitHeightAwareLayoutComponent, Insets)
     
+    public static func moreThanOrEqual(_ min: CGFloat, _ c: FitHeightAwareLayoutComponent) -> ColumnItem {
+        return .moreThanOrEqual(min, c, .zero)
+    }
+    
+    // More than & Less than
+    case inBetween(CGFloat, CGFloat, FitHeightAwareLayoutComponent, Insets)
+    
+    public static func inBetween(_ min: CGFloat, max: CGFloat, _ c: FitHeightAwareLayoutComponent) -> ColumnItem {
+        return .inBetween(min, max, c, .zero)
+    }
+    
+    // Aspect ratio
+    case aspectRatio(CGFloat, LayoutComponent, Insets)
+    
+    public static func aspectRatio(_ r: CGFloat, _ c: LayoutComponent) -> ColumnItem {
+        return .aspectRatio(r, c, .zero)
+    }
+}
+
+extension ColumnItem {
     var inner: LayoutComponent {
         switch self {
         case let .fixed(height: _, component, _):
             return component
-        case let .lessThenOrEqual(_, component, _):
+        case let .lessThanOrEqual(_, component, _):
+            return component
+        case let .moreThanOrEqual(_, component, _):
+            return component
+        case let .inBetween(_, _, component, _):
+            return component
+        case let .aspectRatio(_, component, _):
             return component
         }
     }
@@ -167,17 +205,35 @@ public enum ColumnItem {
         switch self {
         case let .fixed(height, _, _):
             return height
-        case let .lessThenOrEqual(maxHeight, component, _):
-            let height = min(component.size(ifWidth: width).height, maxHeight)
+        case let .lessThanOrEqual(maxHeight, component, insets):
+            let adjustedWidth = width - insets.leadingPlusTrailing
+            let componentHeight = component.size(ifWidth: adjustedWidth).height
+            let height = min(componentHeight, maxHeight)
+            return .abs(height)
+        case let .moreThanOrEqual(minWidth, component, _):
+            let adjustedWidth = width - insets.leadingPlusTrailing
+            let componentHeight = component.size(ifWidth: adjustedWidth).height
+            let width = max(componentHeight, minWidth)
+            return .abs(width)
+        case let .inBetween(minWidth, maxWidth, component, _):
+            let adjustedWidth = width - insets.leadingPlusTrailing
+            let componentHeight = component.size(ifWidth: adjustedWidth).height
+            let width = min(max(componentHeight, minWidth), maxWidth)
+            return .abs(width)
+        case let .aspectRatio(ratio, _, _):
+            let adjustedWidth = width - insets.leadingPlusTrailing
+            let height = adjustedWidth / ratio
             return .abs(height)
         }
     }
     
     var insets: Insets {
         switch self {
-        case let .fixed(_, _, insets):
-            return insets
-        case let .lessThenOrEqual(_, _, insets):
+        case let .fixed(_, _, insets),
+             let .lessThanOrEqual(_, _, insets),
+             let .moreThanOrEqual(_, _, insets),
+             let .inBetween(_, _, _, insets),
+             let .aspectRatio(_, _, insets):
             return insets
         }
     }
@@ -192,7 +248,7 @@ public struct Column: LayoutComponent {
     
     public init(
         spacing: CGFloat,
-        alignment: StackAlignment = .evenlySpacing,
+        alignment: StackAlignment = .evenlySpaced,
         _ items: [ColumnItem]) {
         
         self.spacing = spacing
@@ -220,28 +276,54 @@ public typealias FitWidthAwareLayoutComponent = LayoutComponent & WidthAware
 
 // MARK: - RowItem
 public enum RowItem {
+    // Fixed-size
     case fixed(width: StackItemLength, LayoutComponent, Insets)
     
     public static func fixed(width: StackItemLength, _ c: LayoutComponent) -> RowItem {
         return .fixed(width: width, c, .zero)
     }
     
-    case lessThenOrEqual(CGFloat, FitWidthAwareLayoutComponent, Insets)
+    // Less than
+    case lessThanOrEqual(CGFloat, FitWidthAwareLayoutComponent, Insets)
     
-    public static func lessThenOrEqual(_ max: CGFloat, _ c: FitWidthAwareLayoutComponent) -> RowItem {
-        return .lessThenOrEqual(max, c, .zero)
+    public static func lessThanOrEqual(_ max: CGFloat, _ c: FitWidthAwareLayoutComponent) -> RowItem {
+        return .lessThanOrEqual(max, c, .zero)
     }
     
-    //    case moreThenOrEqual(CGFloat, FitWidthAwareLayoutComponent)
-    //    case moreThenOrEqual(CGFloat, FitWidthAwareLayoutComponent, Insets)
-    //    case aspectRatio(CGFloat, FitWidthAwareLayoutComponent)
-    //    case aspectRatio(CGFloat, FitWidthAwareLayoutComponent, Insets)
+    // More than
+    case moreThanOrEqual(CGFloat, FitWidthAwareLayoutComponent, Insets)
     
+    public static func moreThanOrEqual(_ min: CGFloat, _ c: FitWidthAwareLayoutComponent) -> RowItem {
+        return .moreThanOrEqual(min, c, .zero)
+    }
+    
+    // More than & Less than
+    case inBetween(CGFloat, CGFloat, FitWidthAwareLayoutComponent, Insets)
+    
+    public static func inBetween(_ min: CGFloat, max: CGFloat, _ c: FitWidthAwareLayoutComponent) -> RowItem {
+        return .inBetween(min, max, c, .zero)
+    }
+    
+    // Aspect ratio
+    case aspectRatio(CGFloat, LayoutComponent, Insets)
+    
+    public static func aspectRatio(_ r: CGFloat, _ c: LayoutComponent) -> RowItem {
+        return .aspectRatio(r, c, .zero)
+    }
+}
+
+extension RowItem {
     var inner: LayoutComponent {
         switch self {
         case let .fixed(_, component, _):
             return component
-        case let .lessThenOrEqual(_, component, _):
+        case let .lessThanOrEqual(_, component, _):
+            return component
+        case let .moreThanOrEqual(_, component, _):
+            return component
+        case let .inBetween(_, _, component, _):
+            return component
+        case let .aspectRatio(_, component, _):
             return component
         }
     }
@@ -250,17 +332,35 @@ public enum RowItem {
         switch self {
         case let .fixed(width, _, _):
             return width
-        case let .lessThenOrEqual(maxWidth, component, _):
-            let width = min(component.size(ifHeight: height).width, maxWidth)
+        case let .lessThanOrEqual(maxWidth, component, insets):
+            let adjustedHeight = height - insets.topPlusBottom
+            let componentWidth = component.size(ifHeight: adjustedHeight).width
+            let width = min(componentWidth, maxWidth)
+            return .abs(width)
+        case let .moreThanOrEqual(minWidth, component, insets):
+            let adjustedHeight = height - insets.topPlusBottom
+            let componentWidth = component.size(ifHeight: adjustedHeight).width
+            let width = max(componentWidth, minWidth)
+            return .abs(width)
+        case let .inBetween(minWidth, maxWidth, component, insets):
+            let adjustedHeight = height - insets.topPlusBottom
+            let componentWidth = component.size(ifHeight: adjustedHeight).width
+            let width = min(max(componentWidth, minWidth), maxWidth)
+            return .abs(width)
+        case let .aspectRatio(ratio, _, insets):
+            let adjustedHeight = height - insets.topPlusBottom
+            let width = ratio * adjustedHeight
             return .abs(width)
         }
     }
     
     var insets: Insets {
         switch self {
-        case let .fixed(_, _, insets):
-            return insets
-        case let .lessThenOrEqual(_, _, insets):
+        case let .fixed(_, _, insets),
+             let .lessThanOrEqual(_, _, insets),
+             let .moreThanOrEqual(_, _, insets),
+             let .inBetween(_, _, _, insets),
+             let .aspectRatio(_, _, insets):
             return insets
         }
     }
@@ -275,7 +375,7 @@ public struct Row: LayoutComponent {
     
     public init(
         spacing: CGFloat,
-        alignment: StackAlignment = .evenlySpacing,
+        alignment: StackAlignment = .evenlySpaced,
         _ items: [RowItem]) {
         
         self.spacing = spacing
