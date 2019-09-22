@@ -12,7 +12,7 @@ import Layout
 
 final class TestViewController: UIViewController {
     override func loadView() {
-        view = LessThanRuleView()
+        view = RowWithLessThanRuleView()
     }
 }
 

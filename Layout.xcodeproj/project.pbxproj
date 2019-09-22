@@ -13,12 +13,37 @@
 		F509228A22EC8D1E00527DAB /* HeightAwareStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */; };
 		F509228B22EC8D1E00527DAB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228322EC8D1E00527DAB /* Layout.swift */; };
 		F50922B222ECA91700527DAB /* UIKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922AE22ECA91700527DAB /* UIKit+Layout.swift */; };
-		F50922B322ECA91700527DAB /* HeightAwareDeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922AF22ECA91700527DAB /* HeightAwareDeclarativeLayout.swift */; };
-		F50922B422ECA91700527DAB /* WidthAwareDeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922B022ECA91700527DAB /* WidthAwareDeclarativeLayout.swift */; };
-		F50922B522ECA91700527DAB /* DeclarativeLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922B122ECA91700527DAB /* DeclarativeLayout.swift */; };
 		F51A275C22F72E0D00333C7D /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509224322EC8ADD00527DAB /* Layout.framework */; };
 		F51A276822F8044100333C7D /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A276622F8044100333C7D /* CoreTests.swift */; };
 		F51A276922F8044100333C7D /* DeclarativeLayoutAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */; };
+		F559A2D62336726C00DD2A59 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2D52336726C00DD2A59 /* Center.swift */; };
+		F559A2D82336729600DD2A59 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2D72336729600DD2A59 /* Length.swift */; };
+		F559A2DA233672CD00DD2A59 /* VerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2D9233672CD00DD2A59 /* VerticalLayout.swift */; };
+		F559A2DC233672F500DD2A59 /* HorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2DB233672F500DD2A59 /* HorizontalLayout.swift */; };
+		F559A2DE2336732200DD2A59 /* AspectRatioLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2DD2336732200DD2A59 /* AspectRatioLayout.swift */; };
+		F559A2E02336735B00DD2A59 /* SizeAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2DF2336735B00DD2A59 /* SizeAware.swift */; };
+		F559A2E92337825400DD2A59 /* Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2E82337825400DD2A59 /* Insets.swift */; };
+		F559A2EB2337827300DD2A59 /* FrameHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2EA2337827300DD2A59 /* FrameHolder.swift */; };
+		F559A2ED2337829200DD2A59 /* LayoutComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2EC2337829200DD2A59 /* LayoutComponent.swift */; };
+		F559A2F0233782BB00DD2A59 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2EF233782BB00DD2A59 /* Component.swift */; };
+		F559A2F3233782E400DD2A59 /* Component+SizeAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2F2233782E400DD2A59 /* Component+SizeAware.swift */; };
+		F559A2F52337830E00DD2A59 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2F42337830E00DD2A59 /* Container.swift */; };
+		F559A2F72337832F00DD2A59 /* AspectRatioComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2F62337832F00DD2A59 /* AspectRatioComponent.swift */; };
+		F559A2F92337834A00DD2A59 /* EmptyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2F82337834A00DD2A59 /* EmptyComponent.swift */; };
+		F559A2FB2337841F00DD2A59 /* HeightAwareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2FA2337841F00DD2A59 /* HeightAwareComponent.swift */; };
+		F559A2FD2337845B00DD2A59 /* HeightAwareLayoutComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2FC2337845B00DD2A59 /* HeightAwareLayoutComponent.swift */; };
+		F559A2FF2337846E00DD2A59 /* HeightAwareContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2FE2337846E00DD2A59 /* HeightAwareContainer.swift */; };
+		F559A3012337849100DD2A59 /* HeightAwareColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A3002337849100DD2A59 /* HeightAwareColumn.swift */; };
+		F559A3042337867000DD2A59 /* ColumnItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A3032337867000DD2A59 /* ColumnItem.swift */; };
+		F559A3062337868D00DD2A59 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A3052337868D00DD2A59 /* Column.swift */; };
+		F559A308233786A800DD2A59 /* RowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A307233786A800DD2A59 /* RowItem.swift */; };
+		F559A30A233786C900DD2A59 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A309233786C900DD2A59 /* Row.swift */; };
+		F559A30C233788BC00DD2A59 /* WidthAwareComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A30B233788BC00DD2A59 /* WidthAwareComponent.swift */; };
+		F559A30E233788C500DD2A59 /* WidthAwareLayoutComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A30D233788C500DD2A59 /* WidthAwareLayoutComponent.swift */; };
+		F559A310233788EF00DD2A59 /* WidthAwareContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A30F233788EF00DD2A59 /* WidthAwareContainer.swift */; };
+		F559A3122337890B00DD2A59 /* WidthAwareRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A3112337890B00DD2A59 /* WidthAwareRow.swift */; };
+		F559A31523379B7400DD2A59 /* RowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A31423379B7400DD2A59 /* RowTests.swift */; };
+		F559A31723379B8A00DD2A59 /* ViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A31623379B8A00DD2A59 /* ViewMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +65,38 @@
 		F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightAwareStackLayout.swift; sourceTree = "<group>"; };
 		F509228322EC8D1E00527DAB /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		F50922AE22ECA91700527DAB /* UIKit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Layout.swift"; sourceTree = "<group>"; };
-		F50922AF22ECA91700527DAB /* HeightAwareDeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightAwareDeclarativeLayout.swift; sourceTree = "<group>"; };
-		F50922B022ECA91700527DAB /* WidthAwareDeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidthAwareDeclarativeLayout.swift; sourceTree = "<group>"; };
-		F50922B122ECA91700527DAB /* DeclarativeLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeLayout.swift; sourceTree = "<group>"; };
 		F51A275722F72E0D00333C7D /* LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A275B22F72E0D00333C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51A276622F8044100333C7D /* CoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
 		F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeLayoutAPITests.swift; sourceTree = "<group>"; };
+		F559A2D52336726C00DD2A59 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
+		F559A2D72336729600DD2A59 /* Length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
+		F559A2D9233672CD00DD2A59 /* VerticalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLayout.swift; sourceTree = "<group>"; };
+		F559A2DB233672F500DD2A59 /* HorizontalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLayout.swift; sourceTree = "<group>"; };
+		F559A2DD2336732200DD2A59 /* AspectRatioLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectRatioLayout.swift; sourceTree = "<group>"; };
+		F559A2DF2336735B00DD2A59 /* SizeAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeAware.swift; sourceTree = "<group>"; };
+		F559A2E82337825400DD2A59 /* Insets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insets.swift; sourceTree = "<group>"; };
+		F559A2EA2337827300DD2A59 /* FrameHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameHolder.swift; sourceTree = "<group>"; };
+		F559A2EC2337829200DD2A59 /* LayoutComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutComponent.swift; sourceTree = "<group>"; };
+		F559A2EF233782BB00DD2A59 /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		F559A2F2233782E400DD2A59 /* Component+SizeAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Component+SizeAware.swift"; sourceTree = "<group>"; };
+		F559A2F42337830E00DD2A59 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		F559A2F62337832F00DD2A59 /* AspectRatioComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectRatioComponent.swift; sourceTree = "<group>"; };
+		F559A2F82337834A00DD2A59 /* EmptyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyComponent.swift; sourceTree = "<group>"; };
+		F559A2FA2337841F00DD2A59 /* HeightAwareComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightAwareComponent.swift; sourceTree = "<group>"; };
+		F559A2FC2337845B00DD2A59 /* HeightAwareLayoutComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightAwareLayoutComponent.swift; sourceTree = "<group>"; };
+		F559A2FE2337846E00DD2A59 /* HeightAwareContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightAwareContainer.swift; sourceTree = "<group>"; };
+		F559A3002337849100DD2A59 /* HeightAwareColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightAwareColumn.swift; sourceTree = "<group>"; };
+		F559A3032337867000DD2A59 /* ColumnItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnItem.swift; sourceTree = "<group>"; };
+		F559A3052337868D00DD2A59 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		F559A307233786A800DD2A59 /* RowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowItem.swift; sourceTree = "<group>"; };
+		F559A309233786C900DD2A59 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		F559A30B233788BC00DD2A59 /* WidthAwareComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareComponent.swift; sourceTree = "<group>"; };
+		F559A30D233788C500DD2A59 /* WidthAwareLayoutComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareLayoutComponent.swift; sourceTree = "<group>"; };
+		F559A30F233788EF00DD2A59 /* WidthAwareContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareContainer.swift; sourceTree = "<group>"; };
+		F559A3112337890B00DD2A59 /* WidthAwareRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareRow.swift; sourceTree = "<group>"; };
+		F559A31423379B7400DD2A59 /* RowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTests.swift; sourceTree = "<group>"; };
+		F559A31623379B8A00DD2A59 /* ViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +139,10 @@
 		F509224522EC8ADD00527DAB /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				F509227F22EC8D1E00527DAB /* Core */,
-				F50922B122ECA91700527DAB /* DeclarativeLayout.swift */,
-				F50922AF22ECA91700527DAB /* HeightAwareDeclarativeLayout.swift */,
-				F50922B022ECA91700527DAB /* WidthAwareDeclarativeLayout.swift */,
-				F50922AE22ECA91700527DAB /* UIKit+Layout.swift */,
 				F509224622EC8ADD00527DAB /* Layout.h */,
 				F509224722EC8ADD00527DAB /* Info.plist */,
+				F509227F22EC8D1E00527DAB /* Core */,
+				F559A2E52337822B00DD2A59 /* Declarative */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -103,10 +150,12 @@
 		F509227F22EC8D1E00527DAB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F559A2E2233673BE00DD2A59 /* Common */,
+				F559A2E1233673AC00DD2A59 /* Stack */,
+				F559A2DD2336732200DD2A59 /* AspectRatioLayout.swift */,
+				F559A2DB233672F500DD2A59 /* HorizontalLayout.swift */,
 				F509228322EC8D1E00527DAB /* Layout.swift */,
-				F509228022EC8D1E00527DAB /* StackLayout.swift */,
-				F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */,
-				F509228122EC8D1E00527DAB /* WidthAwareStackLayout.swift */,
+				F559A2D9233672CD00DD2A59 /* VerticalLayout.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -114,11 +163,93 @@
 		F51A275822F72E0D00333C7D /* LayoutTests */ = {
 			isa = PBXGroup;
 			children = (
-				F51A276622F8044100333C7D /* CoreTests.swift */,
-				F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */,
 				F51A275B22F72E0D00333C7D /* Info.plist */,
+				F51A276622F8044100333C7D /* CoreTests.swift */,
+				F559A31323379B6900DD2A59 /* Declarative */,
 			);
 			path = LayoutTests;
+			sourceTree = "<group>";
+		};
+		F559A2E1233673AC00DD2A59 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */,
+				F509228022EC8D1E00527DAB /* StackLayout.swift */,
+				F509228122EC8D1E00527DAB /* WidthAwareStackLayout.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		F559A2E2233673BE00DD2A59 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F559A2D52336726C00DD2A59 /* Center.swift */,
+				F559A2D72336729600DD2A59 /* Length.swift */,
+				F559A2DF2336735B00DD2A59 /* SizeAware.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F559A2E52337822B00DD2A59 /* Declarative */ = {
+			isa = PBXGroup;
+			children = (
+				F559A2EA2337827300DD2A59 /* FrameHolder.swift */,
+				F559A2E82337825400DD2A59 /* Insets.swift */,
+				F559A2EC2337829200DD2A59 /* LayoutComponent.swift */,
+				F50922AE22ECA91700527DAB /* UIKit+Layout.swift */,
+				F559A2EE233782A900DD2A59 /* Fixed */,
+				F559A2F1233782D000DD2A59 /* SizeAware */,
+				F559A3022337866100DD2A59 /* Stack */,
+			);
+			path = Declarative;
+			sourceTree = "<group>";
+		};
+		F559A2EE233782A900DD2A59 /* Fixed */ = {
+			isa = PBXGroup;
+			children = (
+				F559A2EF233782BB00DD2A59 /* Component.swift */,
+				F559A2F42337830E00DD2A59 /* Container.swift */,
+				F559A2F62337832F00DD2A59 /* AspectRatioComponent.swift */,
+				F559A2F82337834A00DD2A59 /* EmptyComponent.swift */,
+			);
+			path = Fixed;
+			sourceTree = "<group>";
+		};
+		F559A2F1233782D000DD2A59 /* SizeAware */ = {
+			isa = PBXGroup;
+			children = (
+				F559A2F2233782E400DD2A59 /* Component+SizeAware.swift */,
+				F559A3002337849100DD2A59 /* HeightAwareColumn.swift */,
+				F559A2FA2337841F00DD2A59 /* HeightAwareComponent.swift */,
+				F559A2FE2337846E00DD2A59 /* HeightAwareContainer.swift */,
+				F559A2FC2337845B00DD2A59 /* HeightAwareLayoutComponent.swift */,
+				F559A30B233788BC00DD2A59 /* WidthAwareComponent.swift */,
+				F559A30F233788EF00DD2A59 /* WidthAwareContainer.swift */,
+				F559A30D233788C500DD2A59 /* WidthAwareLayoutComponent.swift */,
+				F559A3112337890B00DD2A59 /* WidthAwareRow.swift */,
+			);
+			path = SizeAware;
+			sourceTree = "<group>";
+		};
+		F559A3022337866100DD2A59 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				F559A3052337868D00DD2A59 /* Column.swift */,
+				F559A3032337867000DD2A59 /* ColumnItem.swift */,
+				F559A309233786C900DD2A59 /* Row.swift */,
+				F559A307233786A800DD2A59 /* RowItem.swift */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		F559A31323379B6900DD2A59 /* Declarative */ = {
+			isa = PBXGroup;
+			children = (
+				F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */,
+				F559A31423379B7400DD2A59 /* RowTests.swift */,
+				F559A31623379B8A00DD2A59 /* ViewMock.swift */,
+			);
+			path = Declarative;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,14 +362,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F559A2E92337825400DD2A59 /* Insets.swift in Sources */,
+				F559A2F0233782BB00DD2A59 /* Component.swift in Sources */,
 				F509228A22EC8D1E00527DAB /* HeightAwareStackLayout.swift in Sources */,
+				F559A2DC233672F500DD2A59 /* HorizontalLayout.swift in Sources */,
 				F509228B22EC8D1E00527DAB /* Layout.swift in Sources */,
+				F559A2FB2337841F00DD2A59 /* HeightAwareComponent.swift in Sources */,
 				F509228922EC8D1E00527DAB /* WidthAwareStackLayout.swift in Sources */,
+				F559A2EB2337827300DD2A59 /* FrameHolder.swift in Sources */,
+				F559A2F92337834A00DD2A59 /* EmptyComponent.swift in Sources */,
+				F559A310233788EF00DD2A59 /* WidthAwareContainer.swift in Sources */,
+				F559A30A233786C900DD2A59 /* Row.swift in Sources */,
+				F559A2FF2337846E00DD2A59 /* HeightAwareContainer.swift in Sources */,
+				F559A2F72337832F00DD2A59 /* AspectRatioComponent.swift in Sources */,
+				F559A2FD2337845B00DD2A59 /* HeightAwareLayoutComponent.swift in Sources */,
 				F509228822EC8D1E00527DAB /* StackLayout.swift in Sources */,
-				F50922B522ECA91700527DAB /* DeclarativeLayout.swift in Sources */,
-				F50922B322ECA91700527DAB /* HeightAwareDeclarativeLayout.swift in Sources */,
+				F559A2E02336735B00DD2A59 /* SizeAware.swift in Sources */,
+				F559A2ED2337829200DD2A59 /* LayoutComponent.swift in Sources */,
+				F559A30C233788BC00DD2A59 /* WidthAwareComponent.swift in Sources */,
+				F559A308233786A800DD2A59 /* RowItem.swift in Sources */,
+				F559A2DA233672CD00DD2A59 /* VerticalLayout.swift in Sources */,
+				F559A30E233788C500DD2A59 /* WidthAwareLayoutComponent.swift in Sources */,
+				F559A2DE2336732200DD2A59 /* AspectRatioLayout.swift in Sources */,
+				F559A3122337890B00DD2A59 /* WidthAwareRow.swift in Sources */,
+				F559A2F3233782E400DD2A59 /* Component+SizeAware.swift in Sources */,
 				F50922B222ECA91700527DAB /* UIKit+Layout.swift in Sources */,
-				F50922B422ECA91700527DAB /* WidthAwareDeclarativeLayout.swift in Sources */,
+				F559A3062337868D00DD2A59 /* Column.swift in Sources */,
+				F559A2D82336729600DD2A59 /* Length.swift in Sources */,
+				F559A2F52337830E00DD2A59 /* Container.swift in Sources */,
+				F559A2D62336726C00DD2A59 /* Center.swift in Sources */,
+				F559A3042337867000DD2A59 /* ColumnItem.swift in Sources */,
+				F559A3012337849100DD2A59 /* HeightAwareColumn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +400,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F559A31523379B7400DD2A59 /* RowTests.swift in Sources */,
 				F51A276822F8044100333C7D /* CoreTests.swift in Sources */,
+				F559A31723379B8A00DD2A59 /* ViewMock.swift in Sources */,
 				F51A276922F8044100333C7D /* DeclarativeLayoutAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

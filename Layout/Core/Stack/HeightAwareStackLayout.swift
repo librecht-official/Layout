@@ -19,7 +19,7 @@ public func stackHeightAwareColumn(
     spacing: CGFloat,
     _ items: [FlexibleColumnItem], inOrigin origin: CGPoint, width: CGFloat) -> CGFloat {
     
-    let totalAbsoluteItemsHeight = totalHeightAwareColumHeight(
+    let totalAbsoluteItemsHeight = totalHeightAwareColumnHeight(
         spacing: spacing, items, width: width
     )
     let bounds = CGRect(x: 0, y: 0, width: width, height: totalAbsoluteItemsHeight)
@@ -51,7 +51,7 @@ public func stackHeightAwareColumn(
 /// Returns calculated height.
 ///
 /// Does not call FlexibleColumnItem output closure.
-public func totalHeightAwareColumHeight(
+public func totalHeightAwareColumnHeight(
     spacing: CGFloat, _ items: [FlexibleColumnItem], width: CGFloat) -> CGFloat {
     
     var totalAbsoluteItemsHeight = CGFloat(0)

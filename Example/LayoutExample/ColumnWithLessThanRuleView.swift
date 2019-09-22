@@ -1,5 +1,5 @@
 //
-//  LessThanRuleView.swift
+//  ColumnWithLessThanRuleView.swift
 //  LayoutExample
 //
 //  Created by Vladislav Librecht on 21/09/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import Layout
 
-final class LessThanRuleView: UIView {
+final class ColumnWithLessThanRuleView: UIView {
     lazy var v11 = UIView()
     lazy var v12 = UILabel()
     lazy var v13 = UILabel()
@@ -24,26 +24,26 @@ final class LessThanRuleView: UIView {
     
     lazy var column = Column(
         spacing: 8,
-        alignment: .start, [
-            ColumnItem.fixed(height: .abs(100), rowWithStartAlignment, Insets(each: 8)),
-            ColumnItem.fixed(height: .abs(100), rowWithEvenlySpacedAlignment, Insets(each: 8)),
-            ColumnItem.fixed(height: .abs(100), rowWithEndAlignment, Insets(each: 8))
+        distribution: .start, [
+            ColumnItem.fixed(height: .weight(1), rowWithStartAlignment, Insets(each: 8)),
+            ColumnItem.fixed(height: .weight(1), rowWithEvenlySpacedAlignment, Insets(each: 8)),
+            ColumnItem.fixed(height: .weight(1), rowWithEndAlignment, Insets(each: 8))
         ]
     )
     
-    lazy var rowWithStartAlignment = Row(spacing: 8, alignment: .start, [
+    lazy var rowWithStartAlignment = Row(spacing: 8, distribution: .start, [
         RowItem.fixed(width: .abs(40), Component(v11)),
         RowItem.lessThanOrEqual(30, Component(v12), Insets(each: 8)),
         RowItem.lessThanOrEqual(70, Component(v13), Insets(each: 8)),
         ]
     )
-    lazy var rowWithEvenlySpacedAlignment = Row(spacing: 8, alignment: .evenlySpaced, [
+    lazy var rowWithEvenlySpacedAlignment = Row(spacing: 8, distribution: .evenlySpaced, [
         RowItem.fixed(width: .abs(40), Component(v21)),
         RowItem.lessThanOrEqual(30, Component(v22), Insets(each: 8)),
         RowItem.lessThanOrEqual(70, Component(v23), Insets(each: 8)),
         ]
     )
-    lazy var rowWithEndAlignment = Row(spacing: 8, alignment: .end, [
+    lazy var rowWithEndAlignment = Row(spacing: 8, distribution: .end, [
         RowItem.fixed(width: .abs(40), Component(v31)),
         RowItem.lessThanOrEqual(30, Component(v32), Insets(each: 8)),
         RowItem.lessThanOrEqual(70, Component(v33), Insets(each: 8)),
