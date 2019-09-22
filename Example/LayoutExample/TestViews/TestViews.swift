@@ -113,6 +113,7 @@ extension UIScrollView.ContentInsetAdjustmentBehavior: CustomStringConvertible {
         case .automatic: return "automatic"
         case .never: return "never"
         case .scrollableAxes: return "scrollableAxes"
+        @unknown default: return "@unknown default"
         }
     }
 }

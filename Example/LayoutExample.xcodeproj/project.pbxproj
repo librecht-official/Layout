@@ -246,6 +246,7 @@
 				TargetAttributes = {
 					F509229822ECA81600527DAB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					F559A31B23379D9B00DD2A59 = {
 						CreatedOnToolsVersion = 10.3;
@@ -550,7 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -568,7 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

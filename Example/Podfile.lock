@@ -1,5 +1,5 @@
 PODS:
-  - Layout (0.0.2)
+  - Layout (0.0.4)
 
 DEPENDENCIES:
   - Layout (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Layout: 0cabf50e8fe87d1748c482fd5dfacc95e858a9f6
+  Layout: 9e140270c2913002fba58aa22c9b7e5ad62f1fae
 
 PODFILE CHECKSUM: 77bfc5df38f2e56a94c0dc8b3c27159091ce43e2
 
