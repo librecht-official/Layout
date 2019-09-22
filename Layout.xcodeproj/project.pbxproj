@@ -13,9 +13,6 @@
 		F509228A22EC8D1E00527DAB /* HeightAwareStackLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */; };
 		F509228B22EC8D1E00527DAB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509228322EC8D1E00527DAB /* Layout.swift */; };
 		F50922B222ECA91700527DAB /* UIKit+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50922AE22ECA91700527DAB /* UIKit+Layout.swift */; };
-		F51A275C22F72E0D00333C7D /* Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F509224322EC8ADD00527DAB /* Layout.framework */; };
-		F51A276822F8044100333C7D /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A276622F8044100333C7D /* CoreTests.swift */; };
-		F51A276922F8044100333C7D /* DeclarativeLayoutAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */; };
 		F559A2D62336726C00DD2A59 /* Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2D52336726C00DD2A59 /* Center.swift */; };
 		F559A2D82336729600DD2A59 /* Length.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2D72336729600DD2A59 /* Length.swift */; };
 		F559A2DA233672CD00DD2A59 /* VerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A2D9233672CD00DD2A59 /* VerticalLayout.swift */; };
@@ -42,19 +39,7 @@
 		F559A30E233788C500DD2A59 /* WidthAwareLayoutComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A30D233788C500DD2A59 /* WidthAwareLayoutComponent.swift */; };
 		F559A310233788EF00DD2A59 /* WidthAwareContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A30F233788EF00DD2A59 /* WidthAwareContainer.swift */; };
 		F559A3122337890B00DD2A59 /* WidthAwareRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A3112337890B00DD2A59 /* WidthAwareRow.swift */; };
-		F559A31523379B7400DD2A59 /* RowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A31423379B7400DD2A59 /* RowTests.swift */; };
-		F559A31723379B8A00DD2A59 /* ViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F559A31623379B8A00DD2A59 /* ViewMock.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F51A275D22F72E0D00333C7D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F509223A22EC8ADD00527DAB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F509224222EC8ADD00527DAB;
-			remoteInfo = Layout;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F509224322EC8ADD00527DAB /* Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,10 +50,6 @@
 		F509228222EC8D1E00527DAB /* HeightAwareStackLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeightAwareStackLayout.swift; sourceTree = "<group>"; };
 		F509228322EC8D1E00527DAB /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		F50922AE22ECA91700527DAB /* UIKit+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Layout.swift"; sourceTree = "<group>"; };
-		F51A275722F72E0D00333C7D /* LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51A275B22F72E0D00333C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F51A276622F8044100333C7D /* CoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
-		F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarativeLayoutAPITests.swift; sourceTree = "<group>"; };
 		F559A2D52336726C00DD2A59 /* Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Center.swift; sourceTree = "<group>"; };
 		F559A2D72336729600DD2A59 /* Length.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Length.swift; sourceTree = "<group>"; };
 		F559A2D9233672CD00DD2A59 /* VerticalLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLayout.swift; sourceTree = "<group>"; };
@@ -95,8 +76,6 @@
 		F559A30D233788C500DD2A59 /* WidthAwareLayoutComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareLayoutComponent.swift; sourceTree = "<group>"; };
 		F559A30F233788EF00DD2A59 /* WidthAwareContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareContainer.swift; sourceTree = "<group>"; };
 		F559A3112337890B00DD2A59 /* WidthAwareRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidthAwareRow.swift; sourceTree = "<group>"; };
-		F559A31423379B7400DD2A59 /* RowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowTests.swift; sourceTree = "<group>"; };
-		F559A31623379B8A00DD2A59 /* ViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +86,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F51A275422F72E0D00333C7D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F51A275C22F72E0D00333C7D /* Layout.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				F509224522EC8ADD00527DAB /* Layout */,
-				F51A275822F72E0D00333C7D /* LayoutTests */,
 				F509224422EC8ADD00527DAB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				F509224322EC8ADD00527DAB /* Layout.framework */,
-				F51A275722F72E0D00333C7D /* LayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,16 +127,6 @@
 				F559A2D9233672CD00DD2A59 /* VerticalLayout.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		F51A275822F72E0D00333C7D /* LayoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				F51A275B22F72E0D00333C7D /* Info.plist */,
-				F51A276622F8044100333C7D /* CoreTests.swift */,
-				F559A31323379B6900DD2A59 /* Declarative */,
-			);
-			path = LayoutTests;
 			sourceTree = "<group>";
 		};
 		F559A2E1233673AC00DD2A59 /* Stack */ = {
@@ -242,16 +201,6 @@
 			path = Stack;
 			sourceTree = "<group>";
 		};
-		F559A31323379B6900DD2A59 /* Declarative */ = {
-			isa = PBXGroup;
-			children = (
-				F51A276722F8044100333C7D /* DeclarativeLayoutAPITests.swift */,
-				F559A31423379B7400DD2A59 /* RowTests.swift */,
-				F559A31623379B8A00DD2A59 /* ViewMock.swift */,
-			);
-			path = Declarative;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -284,24 +233,6 @@
 			productReference = F509224322EC8ADD00527DAB /* Layout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F51A275622F72E0D00333C7D /* LayoutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F51A276122F72E0D00333C7D /* Build configuration list for PBXNativeTarget "LayoutTests" */;
-			buildPhases = (
-				F51A275322F72E0D00333C7D /* Sources */,
-				F51A275422F72E0D00333C7D /* Frameworks */,
-				F51A275522F72E0D00333C7D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F51A275E22F72E0D00333C7D /* PBXTargetDependency */,
-			);
-			name = LayoutTests;
-			productName = LayoutTests;
-			productReference = F51A275722F72E0D00333C7D /* LayoutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -313,10 +244,6 @@
 				ORGANIZATIONNAME = "Vladislav Librecht";
 				TargetAttributes = {
 					F509224222EC8ADD00527DAB = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-					};
-					F51A275622F72E0D00333C7D = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
@@ -335,20 +262,12 @@
 			projectRoot = "";
 			targets = (
 				F509224222EC8ADD00527DAB /* Layout */,
-				F51A275622F72E0D00333C7D /* LayoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F509224122EC8ADD00527DAB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F51A275522F72E0D00333C7D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -396,26 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F51A275322F72E0D00333C7D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F559A31523379B7400DD2A59 /* RowTests.swift in Sources */,
-				F51A276822F8044100333C7D /* CoreTests.swift in Sources */,
-				F559A31723379B8A00DD2A59 /* ViewMock.swift in Sources */,
-				F51A276922F8044100333C7D /* DeclarativeLayoutAPITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F51A275E22F72E0D00333C7D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F509224222EC8ADD00527DAB /* Layout */;
-			targetProxy = F51A275D22F72E0D00333C7D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F509225522EC8ADD00527DAB /* Debug */ = {
@@ -591,43 +491,6 @@
 			};
 			name = Release;
 		};
-		F51A275F22F72E0D00333C7D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F51A276022F72E0D00333C7D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.librecht.LayoutTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -645,15 +508,6 @@
 			buildConfigurations = (
 				F509225822EC8ADD00527DAB /* Debug */,
 				F509225922EC8ADD00527DAB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F51A276122F72E0D00333C7D /* Build configuration list for PBXNativeTarget "LayoutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F51A275F22F72E0D00333C7D /* Debug */,
-				F51A276022F72E0D00333C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

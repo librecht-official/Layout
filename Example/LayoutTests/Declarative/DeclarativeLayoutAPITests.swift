@@ -7,7 +7,8 @@
 //
 
 import XCTest
-@testable import Layout
+import Layout
+@testable import LayoutExample
 
 class DeclarativeLayoutAPITests: XCTestCase {
     func testComponent() {

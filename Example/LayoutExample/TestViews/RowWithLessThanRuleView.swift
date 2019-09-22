@@ -11,18 +11,18 @@ import Layout
 
 final class RowWithLessThanRuleView: UIView {
     lazy var v11 = UIView()
-    lazy var v12 = UILabel()
-    lazy var v13 = UILabel()
+    lazy var v12 = HeightAwareViewMock { CGSize(width: $0, height: $0) }
+    lazy var v13 = HeightAwareViewMock { CGSize(width: $0, height: $0) }
     
     lazy var v21 = UIView()
-    lazy var v22 = UILabel()
-    lazy var v23 = UILabel()
+    lazy var v22 = HeightAwareViewMock { CGSize(width: $0, height: $0) }
+    lazy var v23 = HeightAwareViewMock { CGSize(width: $0, height: $0) }
     
     lazy var v31 = UIView()
-    lazy var v32 = UILabel()
-    lazy var v33 = UILabel()
+    lazy var v32 = HeightAwareViewMock { CGSize(width: $0, height: $0) }
+    lazy var v33 = HeightAwareViewMock { CGSize(width: $0, height: $0) }
     
-    lazy var column = Row(
+    lazy var layoutComponent = Row(
         spacing: 8,
         distribution: .start, [
             RowItem.fixed(width: .weight(1), columnWithStartAlignment, Insets(each: 8)),
@@ -58,24 +58,17 @@ final class RowWithLessThanRuleView: UIView {
         }
         [v12, v22, v32].forEach { v in
             v.backgroundColor = UIColor.green
-            v.text = longText
             addSubview(v)
         }
         [v13, v23, v33].forEach { v in
             v.backgroundColor = UIColor.blue
-            v.text = longText
             addSubview(v)
         }
     }
     
-    override func safeAreaInsetsDidChange() {
-        super.safeAreaInsetsDidChange()
-        print(safeAreaInsets)
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
-        column.performLayout(inFrame: bounds.inset(by: safeAreaInsets))
+        layoutComponent.performLayout(inFrame: bounds.inset(by: safeAreaInsets))
     }
     
     required init?(coder aDecoder: NSCoder) {

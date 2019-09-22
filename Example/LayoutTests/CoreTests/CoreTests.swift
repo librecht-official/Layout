@@ -1,8 +1,8 @@
 //
-//  LayoutDSLTests.swift
-//  LayoutDSLTests
+//  CoreTests.swift
+//  LayoutTests
 //
-//  Created by Vladislav Librecht on 09.05.2019.
+//  Created by Vladislav Librecht on 22/09/2019.
 //  Copyright © 2019 Vladislav Librecht. All rights reserved.
 //
 
@@ -29,7 +29,7 @@ class CoreTests: XCTestCase {
         
         XCTAssert(r2 == CGRect(x: 33, y: 10, width: 150, height: 300))
     }
-
+    
     func testHorizontalLayout() {
         let bounds = CGRect(x: 0, y: 0, width: 200, height: 0)
         
@@ -81,7 +81,7 @@ class CoreTests: XCTestCase {
                 StackItem({ v1 = $0 }, length: .abs(64), top: 8, bottom: 0, leading: 8, trailing: 8),
                 StackItem({ v2 = $0 }, length: .weight(1), top: 0, bottom: 20, leading: 16, trailing: 16),
                 StackItem({ v3 = $0 }, length: .weight(2), top: 0, bottom: 0, leading: 20, trailing: 0),
-                ],
+            ],
             inFrame: bounds
         )
         

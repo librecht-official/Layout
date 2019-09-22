@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1030"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,10 +17,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F51A275622F72E0D00333C7D"
+               BlueprintIdentifier = "F559A31B23379D9B00DD2A59"
                BuildableName = "LayoutTests.xctest"
                BlueprintName = "LayoutTests"
-               ReferencedContainer = "container:Layout.xcodeproj">
+               ReferencedContainer = "container:LayoutExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

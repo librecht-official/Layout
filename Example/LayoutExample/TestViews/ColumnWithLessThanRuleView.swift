@@ -22,7 +22,7 @@ final class ColumnWithLessThanRuleView: UIView {
     lazy var v32 = UILabel()
     lazy var v33 = UILabel()
     
-    lazy var column = Column(
+    lazy var layoutComponent = Column(
         spacing: 8,
         distribution: .start, [
             ColumnItem.fixed(height: .weight(1), rowWithStartAlignment, Insets(each: 8)),
@@ -70,7 +70,7 @@ final class ColumnWithLessThanRuleView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        column.performLayout(inFrame: bounds)
+        layoutComponent.performLayout(inFrame: bounds.inset(by: safeAreaInsets))
     }
     
     required init?(coder aDecoder: NSCoder) {
