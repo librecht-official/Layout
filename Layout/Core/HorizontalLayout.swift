@@ -23,7 +23,10 @@ public enum HorizontalLayoutRule {
 /// Calculates x and width for the "subview" of "bounds"
 ///
 /// Requires only x and width defined in `bounds`.
-public func horizontalLayout(rule: HorizontalLayoutRule, inBounds bounds: CGRect) -> (x: CGFloat, width: CGFloat) {
+public func horizontalLayout(
+    rule: HorizontalLayoutRule,
+    inBounds bounds: CGRect) -> (x: CGFloat, width: CGFloat) {
+    
     var x, w: CGFloat
     switch rule {
     case let .h1(leading, trailing):

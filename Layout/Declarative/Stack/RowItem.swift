@@ -50,7 +50,7 @@ public enum RowItem {
 }
 
 extension RowItem {
-    var inner: LayoutComponent {
+    var sub: LayoutComponent {
         switch self {
         case let .fixed(_, component, _):
             return component

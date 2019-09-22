@@ -23,13 +23,13 @@ public struct WidthAwareRow: WidthAwareLayoutComponent {
         self.items = items
         self.rowItems = items.map { item -> FlexibleRowItem in
             switch item {
-            case let .fixed(width, inner):
+            case let .fixed(width, sub):
                 return FlexibleRowItem.fixed(
-                    width: width, { inner.performLayout(inFrame: $0) }
+                    width: width, { sub.performLayout(inFrame: $0) }
                 )
-            case let .automatic(inner):
+            case let .automatic(sub):
                 return FlexibleRowItem.automatic(
-                    inner, { _ = inner.performLayout(inOrigin: $0.origin, height: $0.height) }
+                    sub, { _ = sub.performLayout(inOrigin: $0.origin, height: $0.height) }
                 )
             }
         }

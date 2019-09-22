@@ -23,13 +23,13 @@ public struct HeightAwareColumn: HeightAwareLayoutComponent {
         self.items = items
         self.columnItems = items.map { item -> FlexibleColumnItem in
             switch item {
-            case let .fixed(height, inner):
+            case let .fixed(height, sub):
                 return FlexibleColumnItem.fixed(
-                    height: height, { inner.performLayout(inFrame: $0) }
+                    height: height, { sub.performLayout(inFrame: $0) }
                 )
-            case let .automatic(inner):
+            case let .automatic(sub):
                 return FlexibleColumnItem.automatic(
-                    inner, { _ = inner.performLayout(inOrigin: $0.origin, width: $0.width) }
+                    sub, { _ = sub.performLayout(inOrigin: $0.origin, width: $0.width) }
                 )
             }
         }

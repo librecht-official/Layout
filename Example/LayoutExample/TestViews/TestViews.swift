@@ -65,7 +65,7 @@ class TestView: UIView {
                 height: 90,
                 Container(
                     v1, .h1(leading: 8, trailing: 8), .v1(top: 10, bottom: 10),
-                    inner: Component(
+                    sub: Component(
                         l1, .h1(leading: 12, trailing: 8), .v1(top: 8, bottom: 8)
                     )
                 )
@@ -74,13 +74,13 @@ class TestView: UIView {
             .automatic(
                 HeightAwareContainer(
                     v2, h: .h4(centerX: .abs(0), width: .rel(0.8)), top: 8, bottom: 8,
-                    inner: HeightAwareComponent(l2, top: 10, bottom: 20)
+                    sub: HeightAwareComponent(l2, top: 10, bottom: 20)
                 )
             ),
             .automatic(
                 HeightAwareContainer(
                     nil, h: .h1(leading: 8, trailing: 8), top: 0, bottom: 0, relative: false,
-                    inner: HeightAwareComponent(l3)
+                    sub: HeightAwareComponent(l3)
                 )
             ),
             .automatic(

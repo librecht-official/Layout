@@ -29,7 +29,7 @@ public struct Column: LayoutComponent {
         stackColumn(
             spacing: spacing, distribution: distribution, items.map { item -> StackItem in
                 return StackItem(
-                    { item.inner.performLayout(inFrame: $0) },
+                    { item.sub.performLayout(inFrame: $0) },
                     length: item.height(ifStackWidth: frame.width),
                     top: item.insets.top, bottom: item.insets.bottom,
                     leading: item.insets.leading, trailing: item.insets.trailing

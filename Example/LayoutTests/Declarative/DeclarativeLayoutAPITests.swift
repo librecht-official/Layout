@@ -35,7 +35,7 @@ class DeclarativeLayoutAPITests: XCTestCase {
                 .h4(centerX: .abs(0), width: .abs(50)),
                 .v4(centerY: .abs(0), height: .abs(40)),
                 relative: relative,
-                inner: Component(
+                sub: Component(
                     view, .h1(leading: 8, trailing: 8), .v1(top: 10, bottom: 10)
                 )
             )
@@ -66,13 +66,13 @@ class DeclarativeLayoutAPITests: XCTestCase {
         let c = Container(
             container1,
             .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8), relative: false,
-            inner: Container(
+            sub: Container(
                 container2,
                 .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8), relative: true,
-                inner: Container(
+                sub: Container(
                     container3,
                     .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8), relative: false,
-                    inner: Component(
+                    sub: Component(
                         view, .h1(leading: 8, trailing: 8), .v1(top: 8, bottom: 8)
                     )
                 )
@@ -104,7 +104,7 @@ class DeclarativeLayoutAPITests: XCTestCase {
                     v2,
                     .h4(centerX: .abs(0), width: .abs(50)),
                     .v4(centerY: .abs(0), height: .abs(40)),
-                    inner: Component(
+                    sub: Component(
                         v3, .h1(leading: 15, trailing: 8), .v1(top: 10, bottom: 18)
                     )
                 )
@@ -146,7 +146,7 @@ class DeclarativeLayoutAPITests: XCTestCase {
                 height: 90,
                 Container(
                     v1, .h1(leading: 8, trailing: 8), .v1(top: 10, bottom: 10),
-                    inner: Component(
+                    sub: Component(
                         l1, .h1(leading: 12, trailing: 8), .v1(top: 8, bottom: 8)
                     )
                 )
@@ -155,13 +155,13 @@ class DeclarativeLayoutAPITests: XCTestCase {
             .automatic(
                 HeightAwareContainer(
                     v2, h: .h4(centerX: .abs(0), width: .rel(0.8)), top: 8, bottom: 8,
-                    inner: HeightAwareComponent(l2, top: 10, bottom: 20)
+                    sub: HeightAwareComponent(l2, top: 10, bottom: 20)
                 )
             ),
             .automatic(
                 HeightAwareContainer(
                     nil, h: .h1(leading: 8, trailing: 8), top: 0, bottom: 0, relative: false,
-                    inner: HeightAwareComponent(l3)
+                    sub: HeightAwareComponent(l3)
                 )
             )
         ])

@@ -11,21 +11,21 @@ import CoreGraphics
 // MARK: - Container
 /// Non leaf node of the layout tree.
 ///
-/// Works the same as `Component` but additionally have sub-component. Use `relative: false` if inner's view is not a subview of this container's view, e.g. if `frameHolder` is `nil`.
+/// Works the same as `Component` but additionally have sub-component. Use `relative: false` if sub's view is not a subview of this container's view.
 public struct Container<View: FrameHolder>: LayoutComponent {
-    public let view: View?
-    public let inner: LayoutComponent
+    public let view: View
+    public let sub: LayoutComponent
     public let h: HorizontalLayoutRule
     public let v: VerticalLayoutRule
     public let relative: Bool
     
     public init(
-        _ view: View? = nil,
+        _ view: View,
         _ h: HorizontalLayoutRule, _ v: VerticalLayoutRule,
-        relative: Bool = true, inner: LayoutComponent) {
+        relative: Bool = true, sub: LayoutComponent) {
         
         self.view = view
-        self.inner = inner
+        self.sub = sub
         self.h = h
         self.v = v
         self.relative = relative
@@ -33,8 +33,31 @@ public struct Container<View: FrameHolder>: LayoutComponent {
     
     public func performLayout(inFrame frame: CGRect) {
         let containerFrame = layout(LayoutRules(h: h, v: v), inFrame: frame)
-        view?.frame = containerFrame
+        view.frame = containerFrame
         let frame = relative ? containerFrame.bounds : containerFrame
-        inner.performLayout(inFrame: frame)
+        sub.performLayout(inFrame: frame)
+    }
+}
+
+// MARK: - VirtualContainer
+/// Non leaf node of the layout tree without actual view
+public struct VirtualContainer<Sub: LayoutComponent>: LayoutComponent {
+    public let sub: Sub
+    public let h: HorizontalLayoutRule
+    public let v: VerticalLayoutRule
+    
+    public init(
+        _ h: HorizontalLayoutRule, _ v: VerticalLayoutRule,
+        sub: Sub) {
+        
+        self.sub = sub
+        self.h = h
+        self.v = v
+    }
+    
+    public func performLayout(inFrame frame: CGRect) {
+        let containerFrame = layout(LayoutRules(h: h, v: v), inFrame: frame)
+        let frame = containerFrame
+        sub.performLayout(inFrame: frame)
     }
 }
